@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+char password[8];
+bool valid = false;
+int main()
+{
+    cout << "enter your password";
+    cin >> password;
+    const string secret = "12345678";
+if(secret == password){
+    valid = true;
+}
+if(valid){
+    cout << "authentication succesfull! access granted";
+}
+else
+{
+    cout <<"authentication unsuccessfull";
+}
+return 0;
+}
