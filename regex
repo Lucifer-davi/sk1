@@ -1,0 +1,29 @@
+#include <regex>
+#include <iostream>
+using namespace std;
+bool validatePassword(string password)
+{
+    regex pattern("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+])(?=\\S+$).{8,16}");
+    if(regex_match(password,pattern))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int main()
+{
+    string password;
+    cout <<"enter password:";
+    getline(cin, password);
+
+if (validatePassword(password)){
+    cout <<"password is valid." <<endl;
+}
+else{
+    cout <<"password is invalid:" <<endl;
+}
+    return 0;
+}
