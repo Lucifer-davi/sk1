@@ -5,12 +5,12 @@ Public static void main(string []args){
 try{
 ServerSocket SS= new ServerSocket(6666);
 Socket s = ss.accept();
-Datainputstream dis = new Datainputstream(S.get inputstream());
+Datainputstream dis = new Datainputstream(S.getinputstream());
 String str = (String) dis.readUTF();
 System.out.println("message = " + str);
 ss.close();
 }
-catch(Exception){System.out.println(e);}
+catch(Exceptione){System.out.println(e);}
 }
 }
 
